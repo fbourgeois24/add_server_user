@@ -3,6 +3,8 @@ echo "Ajout d'un nouvel utilisateur"
 echo "ATTENTION les caractères spéciaux peuvent causer des problèmes !!!"
 read -p "Nom d'utilisateur : " username
 read -p "Nom du groupe : " groupname
+# On retire les espaces dans le nom du groupe
+groupname="${groupname/ /_}"
 read -p "Mot de passe : " password
 read -p "Clé publique : " ssh_key
 echo ''
