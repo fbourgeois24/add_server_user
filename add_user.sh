@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ `whoami` != root ]
+then
+echo "Vous devez être root pour pouvoir exécuter ce script !"
+exit 1
+fi
 echo "Ajout d'un nouvel utilisateur"
 echo "ATTENTION les caractères spéciaux peuvent causer des problèmes !!!"
 read -p "Nom d'utilisateur : " username
